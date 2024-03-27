@@ -1,9 +1,15 @@
+import { Link, useLoaderData } from "react-router-dom"
+
 export default function Show(props) {
 
+    const aPet = useLoaderData()
     return (
-        <>
-            <h1>Show</h1>
-            <h2>The thing</h2>
-        </>
+        <div>
+            <h1>{aPet.name}</h1>
+            <h2>{aPet.age}</h2>
+            <Link to="/">
+                <button>Go Back</button>
+            </Link>
+        </div>
     )
 }
